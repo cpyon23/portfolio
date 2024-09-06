@@ -1,0 +1,113 @@
+nav ul li a.active {
+    background-image: linear-gradient(to bottom right, #008cff, #e100ff);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    box-shadow: 40px 0 100px #008cff, 
+    -40px 0 100px #e100ff;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #242424;
+    position: sticky;
+    top: 0;
+}
+
+nav .title {
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: transparent;
+    background-image: linear-gradient(to bottom right, #008cff, #e100ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #f0f0f0;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border: none;
+    transition: all 200ms ease-in;
+} 
+
+nav ul li a:not(.active):hover {
+    background-image: linear-gradient(to bottom right, #008cff, #e100ff);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    /* filter: drop-shadow(0 0 2em #008cff); */
+    box-shadow: 40px 0 100px #008cff, 
+    -40px 0 100px #e100ff;
+}
+
+nav .menu {
+    display: none;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+}
+
+nav .menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.2rem;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+@media (max-width: 1000px) {
+    nav .menu {
+        display: flex;
+    }
+    nav {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        margin-bottom: 0.25rem;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a{
+        margin: 0.2rem 0.5rem;
+    }
+}
