@@ -36,3 +36,6 @@ cd vite-portfolio
 npm install
 npm run dev
 ```
+
+📜 License
+This project is open-source under the MIT License.
