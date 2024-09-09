@@ -4,10 +4,6 @@ Welcome to my personal portfolio! This repository showcases my skills and projec
 
 ## 🛠️ Technologies Used
 
-- **Frontend**: React, Next.js, Tailwind CSS
-- **Version Control**: Git
-
-🔧 Built With
 React: A powerful library for building UI components.
 Vite: A blazing fast frontend build tool, making the development process a breeze.
 Tailwind CSS: A utility-first CSS framework for rapidly building modern user interfaces.
@@ -24,13 +20,16 @@ React-Router-Dom: Handles seamless navigation throughout the site.
 ├── styles       # Global and component-level styles using Tailwind CSS
 └── utils        # Utility functions for the application
 ```
+
 🚧 Future Plans
 
 • Expand the portfolio with more projects
 
 🛠️ Local Setup
+
 You can set up this project locally by following these steps:
 Using HTTPS:
+
 ```
 git clone https://github.com/missatrox44/vite-portfolio.git
 cd vite-portfolio
