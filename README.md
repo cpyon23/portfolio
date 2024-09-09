@@ -17,21 +17,23 @@ React-Router-Dom: Handles seamless navigation throughout the site.
 
 ## 📂 Structure
 
-```bash
+```
 ├── components   # Reusable UI components
 ├── pages        # Portfolio pages built with Next.js
 ├── public       # Static assets (images, icons, etc.)
 ├── styles       # Global and component-level styles using Tailwind CSS
 └── utils        # Utility functions for the application
-
+```
 🚧 Future Plans
 
-	•	Expand the portfolio with more projects
+• Expand the portfolio with more projects
 
 🛠️ Local Setup
 You can set up this project locally by following these steps:
 Using HTTPS:
-```git clone https://github.com/missatrox44/vite-portfolio.git
+```
+git clone https://github.com/missatrox44/vite-portfolio.git
 cd vite-portfolio
 npm install
-npm run dev```
+npm run dev
+```
