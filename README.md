@@ -7,12 +7,13 @@ Welcome to my personal portfolio! This repository showcases my skills and projec
 - **Frontend**: React, Next.js, Tailwind CSS
 - **Version Control**: Git
 
-## 🚀 Features
-
-- **Responsive Design**: Built using responsive layouts to ensure a seamless experience across devices.
-- **Projects**: Showcases real-world and personal projects involving cloud infrastructure and web development.
-- **Performance Optimized**: Leveraged server-side rendering (SSR) and cloud solutions to optimize page load times and performance.
-- **Cloud Infrastructure**: Demonstrates skills in deploying scalable cloud solutions using AWS services.
+🔧 Built With
+React: A powerful library for building UI components.
+Vite: A blazing fast frontend build tool, making the development process a breeze.
+Tailwind CSS: A utility-first CSS framework for rapidly building modern user interfaces.
+React Vertical Timeline Component: Used to chronologically display my job experience.
+EmailJS: Ensures that anyone reaching out through the contact form gets their messages delivered directly to my inbox.
+React-Router-Dom: Handles seamless navigation throughout the site.
 
 ## 📂 Structure
 
@@ -26,3 +27,11 @@ Welcome to my personal portfolio! This repository showcases my skills and projec
 🚧 Future Plans
 
 	•	Expand the portfolio with more projects
+
+🛠️ Local Setup
+You can set up this project locally by following these steps:
+Using HTTPS:
+```git clone https://github.com/missatrox44/vite-portfolio.git
+cd vite-portfolio
+npm install
+npm run dev```
