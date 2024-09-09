@@ -4,12 +4,11 @@ Welcome to my personal portfolio! This repository showcases my skills and projec
 
 ## 🛠️ Technologies Used
 
-React: A powerful library for building UI components.
-Vite: A blazing fast frontend build tool, making the development process a breeze.
-Tailwind CSS: A utility-first CSS framework for rapidly building modern user interfaces.
-React Vertical Timeline Component: Used to chronologically display my job experience.
-EmailJS: Ensures that anyone reaching out through the contact form gets their messages delivered directly to my inbox.
-React-Router-Dom: Handles seamless navigation throughout the site.
+[React](https://react.dev/): A powerful library for building UI components.
+[Vite](https://vitejs.dev/): A blazing fast frontend build tool, making the development process a breeze.
+[Tailwind CSS](https://tailwindui.com/): A utility-first CSS framework for rapidly building modern user interfaces.
+<!--EmailJS: Ensures that anyone reaching out through the contact form gets their messages delivered directly to my inbox.
+React-Router-Dom: Handles seamless navigation throughout the site. -->
 
 ## 📂 Structure
 
