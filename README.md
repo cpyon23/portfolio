@@ -30,8 +30,8 @@ You can set up this project locally by following these steps:
 Using HTTPS:
 
 ```
-git clone https://github.com/missatrox44/vite-portfolio.git
-cd vite-portfolio
+git clone https://github.com/cpyon23/portfolio.git
+cd portfolio
 npm install
 npm run dev
 ```
