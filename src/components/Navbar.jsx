@@ -19,6 +19,7 @@ const Navbar = () => {
     // Check system's color scheme preference on load
     useEffect(() => {
         const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+        
         applyTheme(systemTheme.matches ? 'dark' : 'light');
 
         // Listen for changes in the system's color scheme preference

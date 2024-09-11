@@ -19,6 +19,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
     // Send email using EmailJS
     emailjs.send(
       'service_0us2eci',    // Replace with your EmailJS service ID
