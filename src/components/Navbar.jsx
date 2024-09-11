@@ -114,7 +114,7 @@ const Navbar = () => {
                         <input
                             type="checkbox"
                             checked={darkMode}
-                            onChange={toggleDarkMode}
+                            onChange={toggleDarkMode} 
                             className="sr-only"
                         />
                         <div className="block bg-gray-600 w-14 h-8 rounded-full"></div>
