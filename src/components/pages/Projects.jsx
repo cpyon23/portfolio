@@ -1,28 +1,8 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { userinfo } from '../../constants/userinfo';
 
-const projects = [
-  {
-    title: 'Project 1',
-    description: 'A brief description of project 1 and the technologies used.',
-    img: 'https://via.placeholder.com/300x200',
-    link: 'https://github.com/cpyon23/portfolio', // Update with your project link
-  },
-  {
-    title: 'Project 2',
-    description: 'A brief description of project 2 and the technologies used.',
-    img: 'https://via.placeholder.com/300x200',
-    link: 'https://github.com/cpyon23/portfolio',
-  },
-  {
-    title: 'Project 3',
-    description: 'A brief description of project 3 and the technologies used.',
-    img: 'https://via.placeholder.com/300x200',
-    link: 'https://github.com/cpyon23/portfolio',
-  },
-  // Add more projects as needed 
-];
 
 const Projects = () => {
   return (
@@ -35,7 +15,7 @@ const Projects = () => {
           data-aos="fade-up"
           data-aos-delay="200"
           className="grid gap-8 lg:grid-cols-3 sm:grid-cols-2">
-          {projects.map((project, index) => (
+          {userinfo.projects.projectList.map((project, index) => (
             <div
               key={index}
               className="bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"

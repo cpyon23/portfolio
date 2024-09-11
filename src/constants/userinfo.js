@@ -1,4 +1,5 @@
 import { faGithubAlt, faLinkedinIn, faMediumM, faFacebook, faTwitter, faInstagram, faYoutube, faBehance } from "@fortawesome/free-brands-svg-icons"
+import bankingImage from '../assets/banking.png'
 
 export const userinfo = {
     logoText: "Chin Pyon",
@@ -73,6 +74,16 @@ export const userinfo = {
                 position: 'Sr. Specialist - Tech Development Program',
                 time: '07/2017 - 10/2019',
                 description: 'Efficiently managed 100+ VM and VNF Ids at AT&T Labs, optimizing the Engineering Rules Database. Actively engaged in 25+ mentorship sessions, enriching personal and professional growth. Improved code collaboration efficiency by 20% through strategic GitHub management.'
+            }
+        ]
+    },
+    projects: {
+        projectList: [
+            {
+                title: 'Banking',
+                description: 'A online banking platform.',
+                img: bankingImage,
+                link: 'https://github.com/cpyon23/banking', 
             }
         ]
     }
