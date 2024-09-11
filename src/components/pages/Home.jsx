@@ -32,7 +32,8 @@ const TypingEffect = ({ text, speed = 100, pause = 1500 }) => {
 
 const Home = ({ text }) => {
   return (
-    <div className="h-screen w-full relative flex items-center justify-center overflow-hidden">
+    <div
+      className="h-screen w-full relative flex items-center justify-center overflow-hidden">
       <video 
         autoPlay 
         loop 
@@ -43,8 +44,10 @@ const Home = ({ text }) => {
         Your browser does not support the video tag.
       </video>
       
-      <div className="relative z-10 text-center bg-opacity-60 bg-black p-8 rounded-lg">
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
+      <div 
+        className="relative z-10 text-center bg-opacity-60 bg-black p-8 rounded-lg">
+        <h1
+          className="text-5xl md:text-7xl font-bold text-white mb-4">
           {userinfo.greeting.title}
           <TypingEffect text={userinfo.logoText} />
           !

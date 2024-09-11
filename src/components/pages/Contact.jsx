@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS with a duration of 1000ms
+  }, []);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -51,7 +57,7 @@ const Contact = () => {
   };
 
   return (
-    <div data-aos="fade-up" data-aos-duration="1500" className="flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-800">
+    <div data-aos="fade-in" className="flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-800">
       <form onSubmit={handleSubmit} className="w-full max-w-lg bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
         <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">Contact Me</h2>
 
