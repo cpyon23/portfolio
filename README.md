@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-Welcome to my personal portfolio! This repository showcases my skills and projects as a Frontend Developer and AWS Platform Engineer, highlighting my experience with web development technologies and cloud infrastructure.
+Welcome to my personal portfolio! This repository showcases my skills and projects as a Frontend Developer, highlighting my experience with web development technologies.
 
 ## 🛠️ Technologies Used
 
