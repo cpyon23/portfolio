@@ -19,8 +19,8 @@ export const userinfo = {
     about: {
         heading: 'Passionate Engineer and Lifelong Learner',
         content1: 'Hi! I’m Chin, an AWS Platform Engineer with over 8 years of experience specializing in AWS cloud solutions. My passion for technology began early, and I’ve been dedicated to mastering cloud architecture, platform development, and software engineering ever since. I love to write code, troubleshoot complex issues, and find elegant solutions to challenging problems.',
-        content2: 'In my free time, I enjoy exploring new technologies, working on personal coding projects, and contributing to open-source communities. I’m motivated by the ever-evolving landscape of technology, and I’m constantly striving to improve my skills and knowledge.',
-        content3: 'Outside of tech, I have a deep passion for trading cards, which I’ve collected since childhood. Whether it’s building the next big thing in the cloud or finding that rare card to complete my collection, I approach everything with the same level of enthusiasm and commitment.',
+        content2: 'In my free time, I enjoy exploring new technologies, working on personal coding projects. I’m motivated by the ever-evolving landscape of technology, and I’m constantly striving to improve my skills and knowledge.',
+        content3: 'Outside of tech, I have a deep passion for sports, especially basketball. Whether it’s building the next big thing in the cloud or keeping up with player states, I approach everything with the same level of enthusiasm and commitment.',
         resume: "/"
     },
     expertise: {
