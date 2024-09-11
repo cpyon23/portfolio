@@ -2,8 +2,8 @@
 
 Welcome to my personal portfolio! This repository showcases my skills and projects as a Frontend Developer, highlighting my experience with web development technologies.
 
-🚀 [Live Demo](https://portfolio-cpyon23s-projects.vercel.app/)
-Hosted on Vercel, known for its performance and scalability, ensuring a smooth experience for every visitor.
+🚀 [Live Demo](https://portfolio-cpyon23s-projects.vercel.app/)<br>
+Hosted on [Vercel](https://vercel.com/), known for its performance and scalability, ensuring a smooth experience for every visitor.
 
 ## 🛠️ Technologies Used
 
