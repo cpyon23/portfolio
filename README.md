@@ -7,8 +7,8 @@ Welcome to my personal portfolio! This repository showcases my skills and projec
 [React](https://react.dev/): A powerful library for building UI components.<br>
 [Vite](https://vitejs.dev/): A blazing fast frontend build tool, making the development process a breeze.<br>
 [Tailwind CSS](https://tailwindui.com/): A utility-first CSS framework for rapidly building modern user interfaces.
-<!--EmailJS: Ensures that anyone reaching out through the contact form gets their messages delivered directly to my inbox.
-React-Router-Dom: Handles seamless navigation throughout the site. -->
+[EmailJS](https://www.emailjs.com/): Ensures that anyone reaching out through the contact form gets their messages delivered directly to my inbox.
+<!--React-Router-Dom: Handles seamless navigation throughout the site. -->
 
 ## 📂 Structure
 
