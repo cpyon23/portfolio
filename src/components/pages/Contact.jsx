@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -18,9 +19,36 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here, you would handle the form submission logic, such as sending the data to a server or email service.
-    console.log('Form submitted:', formData);
+    // Send email using EmailJS
+    emailjs.send(
+      'service_0us2eci',    // Replace with your EmailJS service ID
+      'template_zp7rqcq',   // Replace with your EmailJS template ID
+      {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+      },
+      'hAIP9zt1WWiIfTulP'        // Replace with your EmailJS user ID
+    )
+    .then((result) => {
+      console.log('Email successfully sent:', result.text);
+      alert('Message sent successfully!');
+    })
+    .catch((error) => {
+      console.error('There was an error sending the email:', error);
+      alert('Failed to send message. Please try again later.');
+    });
+
+    // Reset form after submission
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
+    });
   };
+
   return (
     <div data-aos="fade-up" data-aos-duration="1500" className="flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-800">
       <form onSubmit={handleSubmit} className="w-full max-w-lg bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
@@ -34,7 +62,7 @@ const Contact = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:outline-none focus:border-blue-500"
+            className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:outline-none focus:border-blue-500 bg-white dark:bg-gray-600 text-black dark:text-gray-100"
             required
           />
         </div>
@@ -47,7 +75,7 @@ const Contact = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:outline-none focus:border-blue-500"
+            className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:outline-none focus:border-blue-500 bg-white dark:bg-gray-600 text-black dark:text-gray-100"
             required
           />
         </div>
@@ -60,7 +88,7 @@ const Contact = () => {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:outline-none focus:border-blue-500"
+            className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:outline-none focus:border-blue-500 bg-white dark:bg-gray-600 text-black dark:text-gray-100"
           />
         </div>
 
@@ -71,7 +99,7 @@ const Contact = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:outline-none focus:border-blue-500"
+            className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:outline-none focus:border-blue-500 bg-white dark:bg-gray-600 text-black dark:text-gray-100"
             rows="5"
             required
           ></textarea>
@@ -85,7 +113,7 @@ const Contact = () => {
         </button>
       </form>
     </div>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

@@ -1,13 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 
 const Navbar = () => {
     const [darkMode, setDarkMode] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
 
+    // Function to apply theme based on user preference
+    const applyTheme = (theme) => {
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+            setDarkMode(true);
+        } else {
+            document.documentElement.classList.remove('dark');
+            setDarkMode(false);
+        }
+    };
+
+    // Check system's color scheme preference on load
+    useEffect(() => {
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+        applyTheme(systemTheme.matches ? 'dark' : 'light');
+
+        // Listen for changes in the system's color scheme preference
+        const handleThemeChange = (e) => {
+            applyTheme(e.matches ? 'dark' : 'light');
+        };
+
+        systemTheme.addEventListener('change', handleThemeChange);
+
+        // Cleanup event listener on unmount
+        return () => systemTheme.removeEventListener('change', handleThemeChange);
+    }, []);
+
+    // Toggle dark mode and store it in localStorage
     const toggleDarkMode = () => {
-        setDarkMode(!darkMode);
-        document.documentElement.classList.toggle('dark', !darkMode);
+        const newTheme = darkMode ? 'light' : 'dark';
+        localStorage.setItem('theme', newTheme);
+        applyTheme(newTheme);
     };
 
     const toggleMenu = () => {
@@ -20,6 +49,19 @@ const Navbar = () => {
                 <Link to="home" smooth={true} duration={500} className="cursor-pointer">My Portfolio</Link>
             </div>
             <nav className={`space-x-4 ${menuOpen ? 'block' : 'hidden'} md:flex`}>
+                <Link
+                    to="home"
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    offset={-70}
+                    activeClass="shadow-custom-glow"
+                    className="cursor-pointer text-gray-900 dark:text-gray-100 hover:shadow-custom-glow"
+                    onClick={() => setMenuOpen(false)}
+                >
+                    Home
+                </Link>
+
                 <Link
                     to="about"
                     smooth={true}
