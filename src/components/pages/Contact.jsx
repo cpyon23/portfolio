@@ -66,7 +66,7 @@ const Contact = () => {
           <input
             type="text"
             id="name"
-            name="name"
+            name="name" 
             value={formData.name}
             onChange={handleChange}
             className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:outline-none focus:border-blue-500 bg-white dark:bg-gray-600 text-black dark:text-gray-100"

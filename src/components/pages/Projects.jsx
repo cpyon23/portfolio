@@ -21,7 +21,7 @@ const projects = [
     img: 'https://via.placeholder.com/300x200',
     link: 'https://github.com/cpyon23/portfolio',
   },
-  // Add more projects as needed
+  // Add more projects as needed 
 ];
 
 const Projects = () => {

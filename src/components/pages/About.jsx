@@ -15,7 +15,7 @@ const About = () => {
         <div className="text-center mb-12">
           <h1 
             data-aos="fade-up"
-            data-aos-delay="100"
+            data-aos-delay="100" 
             className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100"
           >
             About Me

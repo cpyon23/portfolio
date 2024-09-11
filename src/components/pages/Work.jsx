@@ -29,7 +29,7 @@ const Work = () => {
             <div className="w-full md:w-1/2 px-4">
               <h3 
                 data-aos="fade-up"
-                data-aos-delay="100"
+                data-aos-delay="100" 
                 className="bg-gradient-to-r from-blue-700 to-purple-400 text-transparent bg-clip-text text-2xl font-semibold"
               >
                 {experience.position}
