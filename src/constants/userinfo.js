@@ -9,8 +9,8 @@ export const userinfo = {
         countrycode: '+1'
     },
     socials: [
-        { type: 'github', link: '', icon: faGithubAlt },
-        { type: 'linkedin', link: '', icon: faLinkedinIn }
+        { type: 'github', link: 'https://github.com/cpyon23', icon: faGithubAlt },
+        { type: 'linkedin', link: 'https://www.linkedin.com/in/chin-pyon', icon: faLinkedinIn }
     ],
     greeting: {
         title: 'Hi, I am ',
