@@ -58,11 +58,19 @@ const Contact = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-800">
-      <div className="w-full max-w-lg bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg flex flex-col justify-between min-h-[500px]">
+      <div 
+        data-aos="fade-in" 
+        data-aos-delay="100"
+        className="w-full max-w-lg bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg flex flex-col justify-between min-h-[500px]"
+      >
         <form onSubmit={handleSubmit} className="w-full">
           <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">Contact Me</h2>
 
-          <div className="mb-4">
+          <div 
+            data-aos="fade-left" 
+            data-aos-delay="100"
+            className="mb-4"
+          >
             <label htmlFor="name" className="block text-gray-700 dark:text-gray-300 font-semibold mb-2">Name</label>
             <input
               type="text"
@@ -75,7 +83,11 @@ const Contact = () => {
             />
           </div>
 
-          <div className="mb-4">
+          <div 
+            data-aos="fade-right" 
+            data-aos-delay="100"
+            className="mb-4"
+          >
             <label htmlFor="email" className="block text-gray-700 dark:text-gray-300 font-semibold mb-2">Email</label>
             <input
               type="email"
@@ -88,7 +100,11 @@ const Contact = () => {
             />
           </div>
 
-          <div className="mb-4">
+          <div 
+            data-aos="fade-left" 
+            data-aos-delay="100"
+            className="mb-4"
+          >
             <label htmlFor="phone" className="block text-gray-700 dark:text-gray-300 font-semibold mb-2">Phone Number</label>
             <input
               type="tel"
@@ -100,7 +116,11 @@ const Contact = () => {
             />
           </div>
 
-          <div className="mb-6">
+          <div 
+            data-aos="fade-right" 
+            data-aos-delay="100"
+            className="mb-6"
+          >
             <label htmlFor="message" className="block text-gray-700 dark:text-gray-300 font-semibold mb-2">Message</label>
             <textarea
               id="message"
@@ -114,6 +134,8 @@ const Contact = () => {
           </div>
 
           <button
+            data-aos="fade-down" 
+            data-aos-delay="200"
             type="submit"
             className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
           >
@@ -122,7 +144,11 @@ const Contact = () => {
         </form>
 
         {/* Social Icons at the Bottom */}
-        <div className="flex justify-center space-x-4 mt-8">
+        <div 
+          data-aos="fade-up" 
+          data-aos-delay="200" 
+          className="flex justify-center space-x-4 mt-8"
+        >
           {userinfo.socials.map((social, index) => (
             <a
               key={index}
