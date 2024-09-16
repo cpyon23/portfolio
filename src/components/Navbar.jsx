@@ -165,7 +165,7 @@ const Navbar = () => {
                         ></div>
                     </div>
                     <span className="ml-3 text-gray-700 dark:text-gray-300">
-                        {darkMode ? 'Dark Mode' : 'Light Mode'}
+                        {darkMode ? '☀️' : '🌙'}
                     </span>
                 </label>
             </div>
