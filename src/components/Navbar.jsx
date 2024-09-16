@@ -3,6 +3,8 @@ import { Link } from 'react-scroll';
 
 const Navbar = () => {
     const [darkMode, setDarkMode] = useState(false);
+    // State to manage whether the header should fade out
+    const [isVisible, setIsVisible] = useState(true);
 
     // Function to apply theme based on user preference
     const applyTheme = (theme) => {
@@ -39,8 +41,46 @@ const Navbar = () => {
         applyTheme(newTheme);
     };
 
+    useEffect(() => {
+        const fadeThreshold = 100; // Distance in pixels to start fading out
+        let lastScrollY = window.scrollY;
+    
+        // Scroll event listener
+        const handleScroll = () => {
+          if (window.scrollY > fadeThreshold && lastScrollY <= window.scrollY) {
+            setIsVisible(false);  // Fades out when scrolling down
+          } else {
+            setIsVisible(true);   // Fades in when scrolling up
+          }
+          lastScrollY = window.scrollY;
+        };
+    
+        // Add event listener for scroll
+        window.addEventListener('scroll', handleScroll);
+    
+        // Clean up event listener on component unmount
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
+    
+      // Hover handlers to fade the header back in when the mouse hovers over it
+      const handleMouseEnter = () => {
+        setIsVisible(true);
+      };
+    
+      const handleMouseLeave = () => {
+        if (window.scrollY > 100) {
+          setIsVisible(false);
+        }
+      };
+
     return (
-        <header className="fixed top-1 inset-x-0 z-50 mx-auto max-w-5xl rounded-full bg-gray-100 dark:bg-gray-800 shadow-md">
+        <header 
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            className={`fixed top-1 inset-x-0 z-50 mx-auto max-w-3xl rounded-full bg-gray-100 dark:bg-gray-700 shadow-md transition-opacity duration-500 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+        >
             <div className="flex flex-col md:flex-row items-center justify-between p-4">
                 <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">
                     <Link to="home" smooth={true} duration={500} className="cursor-pointer">My Portfolio</Link>
