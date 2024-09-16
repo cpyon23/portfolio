@@ -40,7 +40,7 @@ const Navbar = () => {
     };
 
     return (
-        <header className="sticky top-0 z-50 bg-gray-100 dark:bg-gray-800 shadow-md">
+        <header className="fixed top-1 inset-x-0 z-50 mx-auto max-w-5xl rounded-full bg-gray-100 dark:bg-gray-800 shadow-md">
             <div className="flex flex-col md:flex-row items-center justify-between p-4">
                 <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">
                     <Link to="home" smooth={true} duration={500} className="cursor-pointer">My Portfolio</Link>
