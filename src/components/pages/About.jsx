@@ -22,7 +22,7 @@ const About = () => {
           </h1>
           <p 
             data-aos="fade-up"
-            data-aos-delay="100"
+            data-aos-delay="200"
             className="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300"
           >
             { userinfo.about.heading }
@@ -33,7 +33,7 @@ const About = () => {
           {/* Profile Picture */}
           <div
             data-aos="fade-right"
-            data-aos-delay="200" 
+            data-aos-delay="100" 
             className="flex justify-center md:justify-end"
           >
             <img 
@@ -46,7 +46,7 @@ const About = () => {
           {/* About Me Text */}
           <div 
             data-aos="fade-left"
-            data-aos-delay="200" 
+            data-aos-delay="300" 
             className="flex flex-col justify-center"
           >
             <p className="text-lg md:text-xl leading-relaxed">
@@ -76,7 +76,10 @@ const About = () => {
             data-aos-delay="200" 
             className="grid md:grid-cols-3 gap-8 text-center">
             {userinfo.expertise.expertiseList.map((expertise, index) => (
-            <div key={index} className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+            <div 
+              key={index} 
+              className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
+            >
               <h3 className="text-xl font-semibold mb-4">{expertise.title}</h3>
               <p className="text-gray-600 dark:text-gray-300">
                 {expertise.description}

@@ -9,7 +9,7 @@ const Work = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-800 py-16 px-4 md:px-20 lg:px-40">
+    <div className="bg-gray-200 dark:bg-gray-800 py-16 px-4 md:px-20 lg:px-40">
       <h2 
         data-aos="fade-up"
         className="bg-gradient-to-r from-blue-700 to-purple-400 text-transparent bg-clip-text text-4xl font-bold text-center mb-12"

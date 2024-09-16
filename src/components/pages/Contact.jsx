@@ -57,7 +57,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-800">
+    <div className="flex justify-center items-center min-h-screen bg-gray-200 dark:bg-gray-800">
       <div 
         data-aos="fade-in" 
         data-aos-delay="100"
