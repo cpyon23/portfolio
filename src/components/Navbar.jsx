@@ -145,7 +145,7 @@ const Navbar = () => {
                 </nav>
 
                 {/* Dark Mode Toggle */}
-                <label className="flex items-center cursor-pointer mt-4 md:mt-0">
+                <label className="flex items-center cursor-pointer">
                     <div className="relative">
                         <input
                             type="checkbox"
