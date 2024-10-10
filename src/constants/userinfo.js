@@ -18,7 +18,7 @@ export const userinfo = {
     },
     about: {
         heading: 'Passionate Engineer and Lifelong Learner',
-        content1: 'Hi! I’m Chin, an AWS Platform Engineer with over 8 years of experience specializing in AWS cloud solutions. My passion for technology began early, and I’ve been dedicated to mastering cloud architecture, platform development, and software engineering ever since. I love to write code, troubleshoot complex issues, and find elegant solutions to challenging problems.',
+        content1: 'AWS Platform Engineer with over 8 years of experience specializing in AWS cloud solutions. My passion for technology began early, and I’ve been dedicated to mastering cloud architecture, platform development, and software engineering ever since. I love to write code, troubleshoot complex issues, and find elegant solutions to challenging problems.',
         content2: 'In my free time, I enjoy exploring new technologies, working on personal coding projects. I’m motivated by the ever-evolving landscape of technology, and I’m constantly striving to improve my skills and knowledge.',
         content3: 'Outside of tech, I have a deep passion for sports, especially basketball. Whether it’s building the next big thing in the cloud or keeping up with player stats, I approach everything with the same level of enthusiasm and commitment.',
         resume: "/"
@@ -27,7 +27,7 @@ export const userinfo = {
         expertiseList: [
             {
                 title: 'Cloud Architecture',
-                description: 'Extensive experience in designing and deploying scalable AWS cloud solutions.'
+                description: 'Experience in designing and deploying scalable AWS cloud solutions.'
             },
             {
                 title: 'Software Development',
@@ -87,24 +87,4 @@ export const userinfo = {
             }
         ]
     }
-}
-
-export const headings = {
-    workHomePage: 'Work',
-    workMainPage: 'Projects',
-    capabilities: 'Capabilities',
-    resume: 'Resume',
-    education: 'Education',
-    contact: 'Contact Me',
-    home: 'Home'
-}
-
-export const ctaTexts = {
-    //you can customise all the cta texts here.
-    landingCTA: 'My work',
-    workCTA: 'View All',
-    capabCTA: 'Get in Touch',
-    educationCTA: 'About Me',
-    resumeCTA: 'Resume',
-    submitBTN: 'Submit'
 }
