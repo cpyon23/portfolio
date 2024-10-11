@@ -3,10 +3,8 @@ import { Link } from 'react-scroll';
 
 const Navbar = () => {
     const [darkMode, setDarkMode] = useState(false);
-    // State to manage whether the header should fade out
     const [isVisible, setIsVisible] = useState(true);
 
-    // Function to apply theme based on user preference
     const applyTheme = (theme) => {
         if (theme === 'dark') {
             document.documentElement.classList.add('dark');
@@ -17,24 +15,18 @@ const Navbar = () => {
         }
     };
 
-    // Check system's color scheme preference on load
     useEffect(() => {
         const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
-        
         applyTheme(systemTheme.matches ? 'dark' : 'light');
 
-        // Listen for changes in the system's color scheme preference
         const handleThemeChange = (e) => {
             applyTheme(e.matches ? 'dark' : 'light');
         };
 
         systemTheme.addEventListener('change', handleThemeChange);
-
-        // Cleanup event listener on unmount
         return () => systemTheme.removeEventListener('change', handleThemeChange);
     }, []);
 
-    // Toggle dark mode and store it in localStorage
     const toggleDarkMode = () => {
         const newTheme = darkMode ? 'light' : 'dark';
         localStorage.setItem('theme', newTheme);
@@ -42,38 +34,24 @@ const Navbar = () => {
     };
 
     useEffect(() => {
-        const fadeThreshold = 100; // Distance in pixels to start fading out
+        const fadeThreshold = 100;
         let lastScrollY = window.scrollY;
     
-        // Scroll event listener
         const handleScroll = () => {
-          if (window.scrollY > fadeThreshold && lastScrollY <= window.scrollY) {
-            setIsVisible(false);  // Fades out when scrolling down
-          } else {
-            setIsVisible(true);   // Fades in when scrolling up
-          }
-          lastScrollY = window.scrollY;
+            if (window.scrollY > fadeThreshold && lastScrollY <= window.scrollY) {
+                setIsVisible(false);
+            } else {
+                setIsVisible(true);
+            }
+            lastScrollY = window.scrollY;
         };
     
-        // Add event listener for scroll
         window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
     
-        // Clean up event listener on component unmount
-        return () => {
-          window.removeEventListener('scroll', handleScroll);
-        };
-      }, []);
-    
-      // Hover handlers to fade the header back in when the mouse hovers over it
-      const handleMouseEnter = () => {
-        setIsVisible(true);
-      };
-    
-      const handleMouseLeave = () => {
-        if (window.scrollY > 100) {
-          setIsVisible(false);
-        }
-      };
+    const handleMouseEnter = () => setIsVisible(true);
+    const handleMouseLeave = () => window.scrollY > 100 && setIsVisible(false);
 
     return (
         <header 
@@ -81,8 +59,9 @@ const Navbar = () => {
             onMouseLeave={handleMouseLeave}
             className={`fixed top-1 inset-x-0 z-50 mx-auto max-w-3xl rounded-full bg-gray-100 dark:bg-gray-700 shadow-md transition-opacity duration-500 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
         >
-            <div className="flex flex-col md:flex-row items-center justify-center p-4">
-                <nav className="flex space-x-4 mt-4 md:mt-0">
+            <div className="flex items-center justify-between p-4">
+                {/* Center the menu links */}
+                <nav className="flex-grow flex justify-center space-x-4">
                     <Link
                         to="home"
                         smooth={true}
@@ -144,26 +123,26 @@ const Navbar = () => {
                     </Link>
                 </nav>
 
-                {/* Dark Mode Toggle */}
-                <label className="flex items-center cursor-pointer">
-                    <div className="relative">
-                        <input
-                            type="checkbox"
-                            checked={darkMode}
-                            onChange={toggleDarkMode} 
-                            className="sr-only"
-                        />
-                        <div className="block bg-gray-600 w-14 h-8 rounded-full"></div>
-                        <div
-                            className={`dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition-transform ${
-                                darkMode ? 'transform translate-x-6' : ''
-                            }`}
-                        ></div>
-                    </div>
-                    <span className="ml-3 text-gray-700 dark:text-gray-300">
-                        {darkMode ? '☀️' : '🌙'}
-                    </span>
-                </label>
+                {/* Dark Mode Toggle aligned to the right */}
+                <div className="ml-auto flex items-center">
+                    <label className="flex items-center cursor-pointer">
+                        <div className="relative">
+                            <input
+                                type="checkbox"
+                                checked={darkMode}
+                                onChange={toggleDarkMode}
+                                className="sr-only"
+                            />
+                            <div className="block bg-gray-600 w-14 h-8 rounded-full"></div>
+                            <div
+                                className={`dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition-transform ${darkMode ? 'transform translate-x-6' : ''}`}
+                            ></div>
+                        </div>
+                        <span className="ml-3 text-gray-700 dark:text-gray-300">
+                            {darkMode ? '☀️' : '🌙'}
+                        </span>
+                    </label>
+                </div>
             </div>
         </header>
     );
