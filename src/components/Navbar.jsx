@@ -57,7 +57,7 @@ const Navbar = () => {
         <header 
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className={`fixed top-1 inset-x-0 z-50 mx-auto max-w-3xl rounded-full bg-gray-100 dark:bg-gray-700 shadow-md transition-opacity duration-500 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+            className={`fixed top-1 inset-x-0 z-50 mx-auto max-w-xl rounded-full bg-gray-100 dark:bg-gray-700 shadow-md transition-opacity duration-500 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
         >
             <div className="flex items-center justify-between p-4">
                 {/* Center the menu links */}
