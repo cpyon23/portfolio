@@ -70,7 +70,7 @@ const Navbar = () => {
                         href={social.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-900 dark:text-gray-100 hover:text-blue-500"
+                        className="text-gray-900 dark:text-gray-100 hover:text-blue-500 dark:md:hover:text-blue-500"
                         >
                         <FontAwesomeIcon icon={social.icon} size="x" />
                         </a>
