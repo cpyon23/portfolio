@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
+import { userinfo } from '../constants/userinfo';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Navbar = () => {
     const [darkMode, setDarkMode] = useState(false);
@@ -60,6 +62,20 @@ const Navbar = () => {
             className={`fixed top-1 inset-x-0 z-50 mx-auto max-w-xl rounded-full bg-gray-100 dark:bg-gray-700 shadow-md transition-opacity duration-500 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
         >
             <div className="flex items-center justify-between p-4">
+                 {/* Social Icons at the Bottom */}
+                <div className="flex justify-center space-x-3">
+                    {userinfo.socials.map((social, index) => (
+                        <a
+                        key={index}
+                        href={social.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-900 dark:text-gray-100 hover:text-blue-500"
+                        >
+                        <FontAwesomeIcon icon={social.icon} size="x" />
+                        </a>
+                    ))}
+                </div>
                 {/* Center the menu links */}
                 <nav className="flex-grow flex justify-center space-x-4">
                     <Link

@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { userinfo } from '../../constants/userinfo';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Contact = () => {
   useEffect(() => {
@@ -142,25 +140,6 @@ const Contact = () => {
             Send Message
           </button>
         </form>
-
-        {/* Social Icons at the Bottom */}
-        <div 
-          data-aos="fade-up" 
-          data-aos-delay="200" 
-          className="flex justify-center space-x-4 mt-8"
-        >
-          {userinfo.socials.map((social, index) => (
-            <a
-              key={index}
-              href={social.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-900 dark:text-gray-100 hover:text-blue-500"
-            >
-              <FontAwesomeIcon icon={social.icon} size="2x" />
-            </a>
-          ))}
-        </div>
       </div>
     </div>
   );
